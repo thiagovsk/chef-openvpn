@@ -2,7 +2,7 @@ package 'openssh-server'
 package 'openvpn'
 package 'easy-rsa'
 #Uncomplicated Firewall (ufw)
-package 'uwf'
+package 'ufw'
 
 execute "extract vpn server configuration" do
   command "gunzip -c /usr/share/doc/openvpn/examples/sample-config-files/server.conf.gz > /etc/openvpn/server.conf"
