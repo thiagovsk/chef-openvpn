@@ -104,19 +104,31 @@ template "/etc/openvpn/easy-rsa/build-key" do
   source "build-key.erb"
 end
 
-execute 'Build certificate to client 1' do
-  command './build-key client1'
+bash 'Build certificate to client 1' do
+  user 'root'
   cwd '/etc/openvpn/easy-rsa'
+  code <<-EOH
+  source ./vars
+  ./build-key client1
+  EOH
 end
 
-execute 'Build certificate to client 2' do
-  command './build-key client2'
+bash 'Build certificate to client 2' do
+  user 'root'
   cwd '/etc/openvpn/easy-rsa'
+  code <<-EOH
+  source ./vars
+  ./build-key client2
+  EOH
 end
 
-execute 'Build certificate to client 3' do
-  command './build-key client3'
+bash 'Build certificate to client 3' do
+  user 'root'
   cwd '/etc/openvpn/easy-rsa'
+  code <<-EOH
+  source ./vars
+  ./build-key client3
+  EOH
 end
 
 execute 'changing the name of the example file from client.conf to client.ovpn' do
