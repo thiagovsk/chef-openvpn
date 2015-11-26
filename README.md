@@ -1,5 +1,5 @@
 # chef-openvpn
-Livro de receitas Chef para install openvpn.
+Livro de receitas Chef para instalar uma rede de testes openvpn.
 
 Para chegar Chef funcionando corretamente em sua máquina local que você precisa de algumas coisas.
 
@@ -44,7 +44,7 @@ para pegar os arquivos necessários
 - Por exemplo:
 
 ```
-./get_keys.sh 104.131.248.100 client8 ~/chef-openvpn/
+./get_keys.sh  107.170.14.241 client1 ~/chef-openvpn/
 ```
 
 - Por fim basta configurar o seu cliente para acessar a rede, como por exemplo:
